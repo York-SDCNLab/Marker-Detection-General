@@ -1,0 +1,13 @@
+filename: "./base.pcd"
+tag_family: "tag36h11"
+marker_size: 0.8
+tolerance: 0.2
+ratio_threshold: 1.1
+buffer: 8.0
+intensity_threshold : 8000
+EuclideanTolerance: 0.03
+ang_resolution: 0.3
+binary_threshold: 55
+norm_radius: 0.01 #0.005,0.019
+gradient_radius: 0.008
+
