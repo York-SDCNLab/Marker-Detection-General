@@ -2,6 +2,8 @@
 This is the repository for our paper 'Fiducial Marker Detection in General Point Cloud with Intensity'.<br>
 <br>
 The existing LiDAR fiducial marker systems have apparent usage restrictions: <br>
+![fig1](https://user-images.githubusercontent.com/58899542/175343831-7cdbf297-5c03-4f0a-b1bc-72775844af8f.png)
+
 <img width="400" height="300" src="[https://user-images.githubusercontent.com/58899542/175343636-c84c2826-26ec-4504-93cb-eb4d79596945.png]"/> <br>
 
 
