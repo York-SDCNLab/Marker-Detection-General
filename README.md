@@ -14,8 +14,27 @@ indicates that the points of the point cloud are sampled from multiple viewpoint
 The rosbag corresponding to the above video is available at [here](https://drive.google.com/file/d/1Ky2VkhjBpM8Guu6jKD_OapUoRiTiqcfk/view?usp=sharing)
 # Abstract
 In this work,  we develop a novel algorithm to detect the fiducial markers in the multi-viewpoint point cloud. The proposed algorithm includes two stages. First, Regions of Interest (ROIs) detection finds point clusters that could contain fiducial markers. Specifically, a method extracting the ROIs from the intensity perspective is introduced on account of the fact that from the spatial perspective, the markers, which are sheets of paper or thin boards, are non-distinguishable from the planes to which they are attached. Second, marker detection verifies if the candidate ROIs contain fiducial markers and outputs the ID numbers and vertices locations of the markers in the valid ROIs. In particular, the ROIs are transmitted to a predefined intermediate plane for the purpose of adopting a spherical projection to generate the intensity image, and then, marker detection is completed through the intensity image.
+# How to use
+## Requirements
+* Ubuntu 20.04 <br>
+Other versions of the Ubuntu system could work if the following libraries are installed correctly.<br>
+* PCL <br>
+``sudo apt update``<br>
+``sudo apt install libpcl-dev``<br>
+* OpenCV <br>
+``sudo apt update``<br>
+``sudo apt install libopencv-dev python3-opencv``<br>
+* catkin<br>
+``sudo apt update``<br>
+``sudo apt install catkin``<br>
+* yaml-cpp <br>
+``sudo apt update``<br>
+``sudo apt-get install libyaml-cpp-dev``<br>
 
-
+## Commands
+```git clone https://github.com/York-SDCNLab/IILFM.git```<br>
+```cd IILFM```<br>
+```catkin build```<br>
 
 
 
