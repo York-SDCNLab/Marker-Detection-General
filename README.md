@@ -1,6 +1,7 @@
+This is the repository for our paper 'Fiducial Marker Detection in Multi-Viewpoint Point Cloud'. This work has been submitted to IEEE RA-L. <br>
+The introduction video is available at [YouTube](https://www.youtube.com/watch?v=K3Mgo319mas) or [Bilibili](https://www.bilibili.com/video/BV1TN4y157JG?spm_id_from=333.999.0.0&vd_source=6ecb163024bda9a121cdd47cd37f162b).
 # Background
-This is the repository for our paper 'Fiducial Marker Detection in Multi-Viewpoint Point Cloud'.<br>
-<br>
+
 The existing LiDAR fiducial marker systems have usage restrictions: <br>
 <img width="480" height="320" src="https://user-images.githubusercontent.com/58899542/175344791-ad9a54b5-a8f1-4cd1-9a95-dfbe96c55f07.png"/> <br>
 (a): The [LiDARTag](https://github.com/UMich-BipedLab/LiDARTag) system requires that there is adequate clearance around the marker's object due to its clustering method, which makes the marker an extra 3D object added to the environment. (b): The [IILFM](https://github.com/York-SDCNLab/IILFM) system adopts spherical projection (it requires that the point cloud is a one-viewpoint point cloud) to transfer the 3D point cloud to a 2D image and then carry out marker detection. As a result, in cases where the spherical projection is not applicable, the IILFM is not applicable.
