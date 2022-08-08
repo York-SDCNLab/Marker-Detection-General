@@ -33,9 +33,19 @@ Other versions of the Ubuntu system could work if the following libraries are in
 ``sudo apt-get install libyaml-cpp-dev``<br>
 
 ## Commands
-```git clone https://github.com/York-SDCNLab/IILFM.git```<br>
-```cd IILFM```<br>
-```catkin build```<br>
+```git clone https://github.com/York-SDCNLab/Marker-Detection-General.git```<br>
+```cd Marker-Detection-General```<br>
+```cd aruco_detection```<br>
+```mkdir build```<br>
+```cd build```<br>
+```cmake ..```<br>
+Then, download [the pcd file](https://drive.google.com/file/d/1Ky2VkhjBpM8Guu6jKD_OapUoRiTiqcfk/view?usp=sharing) and put it in the ```build``` folder. <br>
+Move the ```config.yaml``` file into the ```build``` folder as well. It can be found in ```aruco_detection``` folder.<br>
+Run the following command in the ```build``` folder<br>
+```./tag_detection```<br>
+Afterewards, the detectio result will be shwon in the terminal:
+![Screenshot from 2022-08-08 09-40-19](https://user-images.githubusercontent.com/58899542/183432557-e8b02010-3de9-4779-ab85-ebc908c7f388.png)<br>
+Moreover, the visualization of the marker detection process will be shown in the 3D viewer.
 
 
 
