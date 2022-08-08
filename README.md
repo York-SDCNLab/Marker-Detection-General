@@ -43,9 +43,17 @@ Then, download [the pcd file](https://drive.google.com/file/d/1Ky2VkhjBpM8Guu6jK
 Move the ```config.yaml``` file into the ```build``` folder as well. It can be found in ```aruco_detection``` folder.<br>
 Run the following command in the ```build``` folder<br>
 ```./tag_detection```<br>
-Afterewards, the detectio result will be shwon in the terminal:
+Afterewards, the visualization of the marker detection process will be shown in the 3D viewer.<br>
+
+
+https://user-images.githubusercontent.com/58899542/183441545-0bfe7d7e-33a5-4524-80dd-fc7e4c525bcf.mp4
+
+
+Moreover, the detectio result will be shwon in the terminal.<br>
 ![Screenshot from 2022-08-08 09-40-19](https://user-images.githubusercontent.com/58899542/183432557-e8b02010-3de9-4779-ab85-ebc908c7f388.png)<br>
-Moreover, the visualization of the marker detection process will be shown in the 3D viewer.
+
+
+
 
 
 
