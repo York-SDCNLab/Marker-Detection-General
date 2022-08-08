@@ -50,8 +50,7 @@ https://user-images.githubusercontent.com/58899542/183441545-0bfe7d7e-33a5-4524-
 
 
 Moreover, the detectio result will be shwon in the terminal.<br>
-![Screenshot from 2022-08-08 09-40-19](https://user-images.githubusercontent.com/58899542/183432557-e8b02010-3de9-4779-ab85-ebc908c7f388.png)<br>
-
+<img width="480" height="170" src="https://user-images.githubusercontent.com/58899542/183432557-e8b02010-3de9-4779-ab85-ebc908c7f388.png"/> <br>
 
 
 
