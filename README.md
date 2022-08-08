@@ -60,6 +60,7 @@ Compared with our previously proposed intensity image-based LiDAR fiducial marke
 ![image](https://user-images.githubusercontent.com/58899542/183443852-db987b38-0a52-4842-a975-327ada1180d3.png) <br>
 The experimental setup is shown in the following figure.<br>
 <img width="480" height="200" src="https://user-images.githubusercontent.com/58899542/183447235-86c7a9e5-916e-483a-a81f-ddf44b4070e4.png"/> <br>
+Please refer to our paper for the details of the setup and the analysis of the comparison.
 
 
 
