@@ -1,5 +1,5 @@
 This is the repository for our paper 'Fiducial Marker Detection in Multi-Viewpoint Point Cloud'. This work has been submitted to IEEE RA-L. <br>
-The introduction video is available at [YouTube](https://www.youtube.com/watch?v=K3Mgo319mas) or [Bilibili](https://www.bilibili.com/video/BV1TN4y157JG?spm_id_from=333.999.0.0&vd_source=6ecb163024bda9a121cdd47cd37f162b).
+The introduction video is available at [YouTube](https://www.youtube.com/watch?v=K3Mgo319mas) and [Bilibili](https://www.bilibili.com/video/BV1TN4y157JG?spm_id_from=333.999.0.0&vd_source=6ecb163024bda9a121cdd47cd37f162b).
 # Background
 
 The existing LiDAR fiducial marker systems have usage restrictions: <br>
