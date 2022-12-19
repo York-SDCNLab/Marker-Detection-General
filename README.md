@@ -2,23 +2,25 @@ This work has been submitted to IEEE RA-L. <br>
 The introduction video is available at [YouTube](https://www.youtube.com/watch?v=K3Mgo319mas) and [Bilibili](https://www.bilibili.com/video/BV1TN4y157JG?spm_id_from=333.999.0.0&vd_source=6ecb163024bda9a121cdd47cd37f162b).
 # Background
 
-The existing LiDAR fiducial marker systems have usage restrictions: <br>
-<img width="480" height="320" src="https://user-images.githubusercontent.com/58899542/175344791-ad9a54b5-a8f1-4cd1-9a95-dfbe96c55f07.png"/> <br>
-(a): The [LiDARTag](https://github.com/UMich-BipedLab/LiDARTag) system requires that there is adequate clearance around the marker's object due to its clustering method, which makes the marker an extra 3D object added to the environment. (b): The [IILFM](https://github.com/York-SDCNLab/IILFM) system adopts spherical projection (it requires that the point cloud is a one-viewpoint point cloud) to transfer the 3D point cloud to a 2D image and then carry out marker detection. As a result, in cases where the spherical projection is not applicable, the IILFM is not applicable.
+The [Intensity Image-based LiDAR Fiducial Marker (IILFM)](https://github.com/York-SDCNLab/IILFM) can provide 3D artificial fiducials for light detection and ranging (LiDAR) sensors. LiDARs with a steering mirror have a limited Field of View (FoV) and it is required to wait for the increase of coverage in the FoV to obtain a dense point cloud. Please refer to the following Figures. Hence, if the adopted LiDAR has a steering mirror, the original IILFM system requires that the LiDAR remain stationary (placed on a tripod) since the system needs a dense single-view point cloud as the input. 
+![fig0](https://user-images.githubusercontent.com/58899542/208346898-9169304a-56b9-47cb-b0a1-036913315471.png)<br>
+(a) Examples of LiDARs with a steering mirror. <br>
+(b) A schematic diagram of the LiDAR with a steering mirror.<br>
+<img width="450" height="150" src="https://user-images.githubusercontent.com/58899542/208347303-2e4904b5-90d4-4fb4-94f2-969c9e310645.png"/> <br>
+(a) The LiDAR only has a front-facing and conical-shaped FoV spanning 38.4 degrees \cite{loam}. <br>
+(b) The point cloud under different integration times (0.1 s, 0.5 s, and 1 s). The FoV coverage increases over time due to the superimposition of frames.<br>
+However, to scan a large scene, for instance, a campus, using a LiDAR that resembles Livox MID-40, the LiDAR has to be moved in the scene due to its small FoV. This requires that the 3D points are captured at multiple locations or viewpoints, and thus, the prerequisite of IILFM is not satisfied. 
 
 
+https://user-images.githubusercontent.com/58899542/208347959-75cfc3b0-d0a8-4b5c-88ee-439d915d61bb.mp4
+
+![fig2](https://user-images.githubusercontent.com/58899542/208348146-82e93a1e-757a-4ea0-962f-7ffd3358bc39.png)
 
 
-With no spatial marker placement requirement, fiducial marker detection in the multi-viewpoint point cloud remains an unsolved problem. The multi-viewpoint point cloud 
-indicates that the points of the point cloud are sampled from multiple viewpoints. In real-world applications, the multi-viewpoint point cloud can be a 3D point cloud map built by the SLAM framework, a 3D point cloud model reconstructed by the SFM framework or just a stitch of multiple one-viewpoint point clouds. The following video shows the construction of a multi-viewpoint point cloud using the [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping) framework.
-![sucai_02_](https://user-images.githubusercontent.com/58899542/174899500-b25e7412-fe16-42eb-b0ec-b994bd12066f.gif)
+To fill this technology gap, in this letter, we develop an enhanced IILFM for LiDARs with a steering mirror. In particular, we design a novel clustering algorithm, together with a cluster screening algorithm, to extract point clusters that could contain LiDAR fiducial markers from an unordered multi-view point cloud. Thereafter, we propose an approach to detect the fiducials from the point clusters scattered in the space. The extension from single-view point cloud to multi-view point cloud allows LiDARs with a steering mirror to be placed on a moving platform, such as a mobile robot, rather than a static tripod. Therefore, it is feasible to detect the fiducials in the 3D map built by a Simultaneous Localization and Mapping (SLAM) framework. 
+![map](https://user-images.githubusercontent.com/58899542/208348093-d83933a1-097c-4a9b-ae4f-bea9daf40377.png)
 ## Supplementary Instructions
 The pcd file corresponding to the above video is available at [GoogleDrive](https://drive.google.com/file/d/1Ky2VkhjBpM8Guu6jKD_OapUoRiTiqcfk/view?usp=sharing). Again, please refer to [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping) if you are interested in the generation of the multi-viewpoint point cloud. Our algorithm requires that the inputted point cloud is in the format of pcd. [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping) is just a tool to help you obtain such a point cloud with a Livox mid-40 LiDAR rather than a necessary condition. That is, you can use other ways, for instance, [terrestrial laser scanning](https://www.youtube.com/watch?v=4-Cxoyb9N_c&t=291s), to acquire the multi-viewpoint point cloud. As long as the format is in pcd and the intensity values are available, our algorithm is applicable.
-# Abstract
-In this work,  we develop a novel algorithm to detect the fiducial markers in the multi-viewpoint point cloud. The proposed algorithm includes two stages. First, Regions of Interest (ROIs) detection finds point clusters that could contain fiducial markers. Specifically, a method extracting the ROIs from the intensity perspective is introduced on account of the fact that from the spatial perspective, the markers, which are sheets of paper or thin boards, are non-distinguishable from the planes to which they are attached. Second, marker detection verifies if the candidate ROIs contain fiducial markers and outputs the ID numbers and vertices locations of the markers in the valid ROIs. In particular, the ROIs are transmitted to a predefined intermediate plane for the purpose of adopting a spherical projection to generate the intensity image, and then, marker detection is completed through the intensity image.<br>
-The following image shows the overall pipeline of the proposed algorithm.
-![pipeline](https://user-images.githubusercontent.com/58899542/183443196-473c77fe-8800-4b97-902b-f6f97c85fc07.png)
-
 
 # How to use
 ## Requirements
@@ -49,19 +51,14 @@ Move the ```config.yaml``` file into the ```build``` folder as well. It can be f
 Run the following command in the ```build``` folder<br>
 ```./tag_detection```<br>
 Afterewards, the visualization of the marker detection process will be shown in the 3D viewer.<br>
-
-
-https://user-images.githubusercontent.com/58899542/183441545-0bfe7d7e-33a5-4524-80dd-fc7e4c525bcf.mp4
-
-
 Moreover, the detectio result will be shwon in the terminal.<br>
-<img width="480" height="170" src="https://user-images.githubusercontent.com/58899542/183432557-e8b02010-3de9-4779-ab85-ebc908c7f388.png"/> <br>
+
 # Comparison with the IILFM system
 Compared with our previously proposed intensity image-based LiDAR fiducial marker system ([GitHub](https://github.com/York-SDCNLab/IILFM), [Paper](https://ieeexplore.ieee.org/document/9774900)), the approach introduced in this work aims at solving fiducial marker detection in the multi-viewpoint point cloud (the spherical projection is not directly applicable in this kind of point cloud). The following table shows the comparison of the two systems in terms of the accuracy.  IILFM and the proposed algorithm output similar vertices estimation results and the accuracy is similar. <br>
 ![image](https://user-images.githubusercontent.com/58899542/183443852-db987b38-0a52-4842-a975-327ada1180d3.png) <br>
 The experimental setup is shown in the following figure.<br>
 <img width="480" height="200" src="https://user-images.githubusercontent.com/58899542/183447235-86c7a9e5-916e-483a-a81f-ddf44b4070e4.png"/> <br>
-Please refer to our paper for the details of the setup and the analysis of the comparison.
+
 
 
 
