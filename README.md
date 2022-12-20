@@ -6,7 +6,8 @@ The [Intensity Image-based LiDAR Fiducial Marker (IILFM)](https://github.com/Yor
 (a) Examples of LiDARs with a steering mirror. <br>
 (b) A schematic diagram of the LiDAR with a steering mirror.<br>
 <img width="450" height="150" src="https://user-images.githubusercontent.com/58899542/208347303-2e4904b5-90d4-4fb4-94f2-969c9e310645.png"/> <br>
-(a) The LiDAR only has a front-facing and conical-shaped FoV spanning 38.4 degrees \cite{loam}. <br>
+Take the Livox MID-40 as an example.<br>
+(a) The LiDAR only has a front-facing and conical-shaped FoV spanning 38.4 degrees. <br>
 (b) The point cloud under different integration times (0.1 s, 0.5 s, and 1 s). The FoV coverage increases over time due to the superimposition of frames.<br>
 However, to scan a large scene, for instance, a campus, using a LiDAR that resembles Livox MID-40, the LiDAR has to be moved in the scene due to its small FoV. This requires that the 3D points are captured at multiple locations or viewpoints, and thus, the prerequisite of IILFM is not satisfied. 
 
