@@ -55,11 +55,6 @@ Run the following command in the ```build``` folder<br>
 Afterewards, the visualization of the marker detection process will be shown in the 3D viewer.<br>
 Moreover, the detectio result will be shwon in the terminal.<br>
 
-# Comparison with the IILFM system
-Compared with our previously proposed intensity image-based LiDAR fiducial marker system ([GitHub](https://github.com/York-SDCNLab/IILFM), [Paper](https://ieeexplore.ieee.org/document/9774900)), the approach introduced in this work aims at solving fiducial marker detection in the multi-viewpoint point cloud (the spherical projection is not directly applicable in this kind of point cloud). The following table shows the comparison of the two systems in terms of the accuracy.  IILFM and the proposed algorithm output similar vertices estimation results and the accuracy is similar. <br>
-![image](https://user-images.githubusercontent.com/58899542/183443852-db987b38-0a52-4842-a975-327ada1180d3.png) <br>
-The experimental setup is shown in the following figure.<br>
-<img width="480" height="200" src="https://user-images.githubusercontent.com/58899542/183447235-86c7a9e5-916e-483a-a81f-ddf44b4070e4.png"/> <br>
 
 
 
