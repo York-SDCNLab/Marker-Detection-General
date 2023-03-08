@@ -1,4 +1,3 @@
-This work has been submitted to IEEE RA-L. <br>
 # Background
 
 The [Intensity Image-based LiDAR Fiducial Marker (IILFM)](https://github.com/York-SDCNLab/IILFM) can provide 3D artificial fiducials for light detection and ranging (LiDAR) sensors. LiDARs with a steering mirror have a limited Field of View (FoV) and it is required to wait for the increase of coverage in the FoV to obtain a dense point cloud. Please refer to the following Figures. Hence, if the adopted LiDAR has a steering mirror, the original IILFM system requires that the LiDAR remain stationary (placed on a tripod) since the system needs a dense single-view point cloud as the input. 
