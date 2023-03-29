@@ -1,12 +1,6 @@
-# Background
+# Motivations
 
-
-Few works provide 3D artificial fiducials for light detection and ranging (LiDAR) sensors. The [Intensity Image-based LiDAR Fiducial Marker (IILFM)](https://github.com/York-SDCNLab/IILFM) is one of the pioneer studies in this field. However, IILFM has two evident drawbacks: 1) it requires a dense single-view point cloud with no occlusion as the input; 2) the pose estimation accuracy degrades as the distance between the marker and the LiDAR increases. In this paper, we develop an enhanced LiDAR fiducial marker system, named IILFM++, that overcomes the shortcomings of the original IILFM. The enhancements are twofold. <br>
-* First, we design a new pipeline to extend the LiDAR fiducial marker detection from the single-view point cloud to the general point cloud. The general point cloud, such as a 3D prior map built by a Simultaneous Localization and Mapping framework, allows the existence of multiple viewpoints and occlusion. <br>
-* Second, we propose a new algorithm to boost the accuracy of pose estimation based on fiducials. In particular, we improve the imaging quality of the intensity image by introducing an intermediate plane. <br>
-
-
-These improvements are favorable to downstream tasks, for instance, localization and navigation. Both qualitative and quantitative experiments are conducted to demonstrate the superiority of the proposed IILFM++ over previous approaches.
+LiDAR fiducials localization on a 3D prior map is favorable to downstream tasks, including relocalization and navigation. The existing methods cannot be directly applied to this problem as they require an occlusion-free  single-view point cloud as the input. In this paper, we develop a novel method to localize fiducials, which refer to planar markers (e.g. AprilTag and ArUco), on a 3D prior map, built from a LiDAR-based Simultaneous Localization and Mapping framework, with multiple viewpoints and occlusion. In particular, we adopt the [Intensity Image-based LiDAR Fiducial Marker (IILFM)](https://github.com/York-SDCNLab/IILFM) as the baseline and develop a new fiducials localization pipeline which is composed of three steps: 1) intensity feature extraction; 2) feature clustering and cluster screening; 3) marker detection via an intermediate plane. In addition, we develop a new algorithm to boost the pose estimation accuracy over IILFM by improving the imaging quality of the intensity image. Both qualitative and quantitative experiments are conducted to demonstrate the superiority of the proposed method over the previous approaches. 
 
 https://user-images.githubusercontent.com/58899542/208347959-75cfc3b0-d0a8-4b5c-88ee-439d915d61bb.mp4
 
