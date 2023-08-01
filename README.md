@@ -10,6 +10,15 @@ https://user-images.githubusercontent.com/58899542/208347959-75cfc3b0-d0a8-4b5c-
 Our method can detect the LiDAR fiducial markers in a point cloud with occlusion while computing their poses relative to the global frame. 
 <img width="600" height="150" src="https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/b319bf13-b622-4044-adf9-1fddca7d6c25"/> <br>
 
+The following is a synthesis point cloud with occlusion. The two presenters are holding two different AprilTag markers. Observing along the X-axis of the global coordinate system, the back subpoint cloud is totally blocked by the front one. Thus, it is infeasible to project the 3D point cloud to a 2D image plane due to the occlusion.
+
+
+https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/fd501204-be6a-4c09-a6cb-46e6f2b03f1a
+
+
+
+![process](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/da0baa0f-f278-4296-a7e2-6d8804038a32)
+
 
 <img width="600" height="200" src="https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/6a8cd9db-1264-4df1-bfe4-e981d8991176"/> <br>
 
