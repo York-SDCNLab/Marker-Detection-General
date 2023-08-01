@@ -7,12 +7,11 @@ https://user-images.githubusercontent.com/58899542/208347959-75cfc3b0-d0a8-4b5c-
 ![fig2](https://user-images.githubusercontent.com/58899542/208348146-82e93a1e-757a-4ea0-962f-7ffd3358bc39.png)
 
 ![map](https://user-images.githubusercontent.com/58899542/208348093-d83933a1-097c-4a9b-ae4f-bea9daf40377.png)<br>
+![image](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/b319bf13-b622-4044-adf9-1fddca7d6c25)<br>
+
+![image](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/6a8cd9db-1264-4df1-bfe4-e981d8991176)<br>
 Besides the capability of handling point clouds with occlusion, our method shows superiority in terms of pose estimation accuracy compared to [IILFM](https://github.com/York-SDCNLab/IILFM).
-
-![image](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/b319bf13-b622-4044-adf9-1fddca7d6c25)
-
-![image](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/6a8cd9db-1264-4df1-bfe4-e981d8991176)
-
+![image](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/5fa06a1b-a7af-40f2-9478-b67543dfbe02)
 
 ## Supplementary Instructions
 The pcd file corresponding to the above video is available at [GoogleDrive](https://drive.google.com/file/d/1Ky2VkhjBpM8Guu6jKD_OapUoRiTiqcfk/view?usp=sharing). Again, please refer to [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping) if you are interested in the generation of the point cloud. Our algorithm requires that the inputted point cloud is in the format of pcd. [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping) is just a tool to help you obtain such a point cloud with a Livox mid-40 LiDAR rather than a necessary condition. That is, you can use other ways, for instance, [terrestrial laser scanning](https://www.youtube.com/watch?v=4-Cxoyb9N_c&t=291s), to acquire a point cloud. As long as the format is in pcd and the intensity values are available, our algorithm is applicable.
