@@ -20,6 +20,10 @@ https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/fd50120
 ![process](https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/da0baa0f-f278-4296-a7e2-6d8804038a32)
 
 
+
+https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/c0e42375-84de-405a-adf8-dceab31a88e1
+
+
 <img width="600" height="200" src="https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/6a8cd9db-1264-4df1-bfe4-e981d8991176"/> <br>
 
 Besides the capability of handling point clouds with occlusion, our method shows superiority in terms of pose estimation accuracy compared to [IILFM](https://github.com/York-SDCNLab/IILFM).
