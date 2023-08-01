@@ -4,10 +4,10 @@ The LiDAR fiducial marker, akin to the well-known AprilTag used in camera applic
 
 https://user-images.githubusercontent.com/58899542/208347959-75cfc3b0-d0a8-4b5c-88ee-439d915d61bb.mp4
 
-![fig2](https://user-images.githubusercontent.com/58899542/208348146-82e93a1e-757a-4ea0-962f-7ffd3358bc39.png)
+![fig2](https://user-images.githubusercontent.com/58899542/208348146-82e93a1e-757a-4ea0-962f-7ffd3358bc39.png) <>br
 
 ![map](https://user-images.githubusercontent.com/58899542/208348093-d83933a1-097c-4a9b-ae4f-bea9daf40377.png)<br>
-Our method can detect the LiDAR fiducial markers in a point cloud with occlusion while computing their poses relative to the global frame. 
+Our method can detect the LiDAR fiducial markers in a point cloud with occlusion while computing their poses relative to the global frame. <br>
 <img width="600" height="150" src="https://github.com/York-SDCNLab/Marker-Detection-General/assets/58899542/b319bf13-b622-4044-adf9-1fddca7d6c25"/> <br>
 
 The following is a synthesis point cloud with occlusion. The two presenters are holding two different AprilTag markers. Observing along the X-axis of the global coordinate system, the back subpoint cloud is totally blocked by the front one. Thus, it is infeasible to project the 3D point cloud to a 2D image plane due to the occlusion.
