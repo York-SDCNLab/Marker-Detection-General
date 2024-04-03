@@ -1,8 +1,8 @@
 # Motivations
 
-The LiDAR fiducial marker, akin to the well-known AprilTag used in camera applications, serves as a convenient resource to impart artificial features to the LiDAR sensor, facilitating robotics applications. Unfortunately, current LiDAR fiducial marker detection methods are limited to occlusion-free point clouds. In this work, we present a novel approach for occlusion-resistant LiDAR fiducial marker detection. The following video shows a point cloud with occlusion. It is a 3D map built from the [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping).
+The LiDAR fiducial tag, akin to the well-known AprilTag used in camera applications, serves as a convenient resource to impart artificial features to the LiDAR sensor, facilitating robotics applications. Unfortunately, the existing LiDAR fiducial tag localization methods do not apply to 3D LiDAR maps while resolving this problem is beneficial to LiDAR-based relocalization and navigation. In this paper, we develop a novel approach to directly localize fiducial tags on a 3D LiDAR prior map, returning the tag poses (labeled by ID number) and vertex locations (labeled by index) w.r.t. the global coordinate system of the map. The following shows a 3D map built from the [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping).
 
-https://user-images.githubusercontent.com/58899542/208347959-75cfc3b0-d0a8-4b5c-88ee-439d915d61bb.mp4
+
 
 ![fig2](https://user-images.githubusercontent.com/58899542/208348146-82e93a1e-757a-4ea0-962f-7ffd3358bc39.png) <br>
 
