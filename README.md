@@ -65,6 +65,21 @@ Run the following command in the ```build``` folder<br>
 Afterward, the visualization of the marker detection process will be shown in the 3D viewer.<br>
 Moreover, the detection result will be shown in the terminal.<br>
 
+# Citation
+If you find this work helpful for your research, please cite our paper:
+```
+@ARTICLE{10654791,
+  author={Liu, Yibo and Shan, Jinjun and Schofield, Hunter},
+  journal={IEEE Access}, 
+  title={Improvements to Thin-Sheet 3D LiDAR Fiducial Tag Localization}, 
+  year={2024},
+  volume={12},
+  number={},
+  pages={124907-124914},
+  keywords={Three-dimensional displays;Laser radar;Point cloud compression;Simultaneous localization and mapping;Visualization;Algorithm design and theory;Fiducial tag;LiDAR;Localization},
+  doi={10.1109/ACCESS.2024.3451404}}
+```
+
 
 
 
