@@ -1,5 +1,7 @@
 # Motivations
 
+The paper is published in [IEEE ACCESS](https://ieeexplore.ieee.org/abstract/document/10654791).
+
 The LiDAR fiducial tag, akin to the well-known AprilTag used in camera applications, serves as a convenient resource to impart artificial features to the LiDAR sensor, facilitating robotics applications. Unfortunately, the existing LiDAR fiducial tag localization methods do not apply to 3D LiDAR maps while resolving this problem is beneficial to LiDAR-based relocalization and navigation. In this paper, we develop a novel approach to directly localize fiducial tags on a 3D LiDAR prior map, returning the tag poses (labeled by ID number) and vertex locations (labeled by index) w.r.t. the global coordinate system of the map. The following shows a 3D map built from the [modified livox_mapping](https://github.com/York-SDCNLab/Modified_livox_mapping).
 
 
