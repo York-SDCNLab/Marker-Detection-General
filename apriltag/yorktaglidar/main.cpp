@@ -347,7 +347,8 @@ int main(int argc, char** argv){
 
 		cout<<"mid"<<mid<<endl;
 
-		intensity_threshold = mid;
+		// intensity_threshold = mid;
+		
 
 
 
